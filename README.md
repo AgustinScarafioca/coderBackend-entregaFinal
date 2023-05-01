@@ -3,6 +3,7 @@ Manejo de rutas:
 En el .env se debe completar con el usuario y la contraseña del mail desde el cual se mandaran los mensajes de orden recibida.
 
 Rutas sin inicio de sesion
+
     GET / muestra el inicio.
     GET /productos muestra el listado de productos existentes.
     GET /productos/busqueda: utiliza el buscador de productos.
