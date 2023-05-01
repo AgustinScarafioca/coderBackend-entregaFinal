@@ -2,7 +2,7 @@ import { Router } from 'express'
 import passport from 'passport'
 import multer from 'multer'
 import cart from '../controller/cart.js'
-import chat from '../controller/chat.js'
+import Chat from '../controller/chat.js'
 import logout from '../controller/logout.js'
 import product from '../controller/product.js'
 import purchases from '../controller/purchases.js'
@@ -47,8 +47,8 @@ carrito.post('/', auth, cart.postProduct)
 carrito.post('/producto', auth, cart.deleteProduct)
 carrito.delete('/', auth, cart.delete)
 
-compras.post('/', authentication, purchases.create)
+compras.post('/', auth, purchases.create)
 
-chat.get('/', auth, chat)
+chat.get('/', auth, Chat)
 
 export { productos, ingresar, registrarse, salir, carrito, compras, chat }

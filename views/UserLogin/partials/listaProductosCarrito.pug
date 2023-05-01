@@ -24,8 +24,8 @@ h2(style='color:crimson;') Listado de productos
             form(onsubmit=`return eliminarCarrito()`)
                 button.btn.btn-danger.btn-sm(type='submit') Eliminar Carrito 
             form(action='/compras', method='post')
-                button.btn.btn-success.btn-sm.mx-3(type='submit') Compar 
+                button.btn.btn-success.btn-sm.mx-3(type='submit') Comprar
                             
     else
-        h3(class='alert alert-danger') No products
+        h3(class='alert alert-danger') No productos
         a.nav-link(href='/productos') Añadir Productos

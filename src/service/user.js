@@ -19,7 +19,7 @@ class Service {
 				photo: url.slice(6),
 				username: user.username,
 				password: createHash(user.password),
-				admin: true,
+				admin: false,
 			}
 			const add = await Persistence.create(newUser)
 			return add
@@ -30,7 +30,7 @@ class Service {
 
 	async read(correo) {
 		try {
-			const user = await Persistence.Read(correo)
+			const user = await Persistence.read(correo)
 			return user
 		} catch (error) {
 			logger.error(`Error al leer usuario: ${error}`)

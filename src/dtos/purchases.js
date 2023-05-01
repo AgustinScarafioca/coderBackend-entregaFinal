@@ -10,6 +10,6 @@ export default function DTO(purchases) {
 	if (Array.isArray(purchases)) {
 		return purchases.map((purchasesMap) => new purchasesDto(purchasesMap))
 	} else {
-		return new purchasesDto(Shopping)
+		return new purchasesDto(purchases)
 	}
 }

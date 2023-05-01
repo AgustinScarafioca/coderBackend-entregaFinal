@@ -7,11 +7,11 @@ html(lang='es')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         script(src='/socket.io/socket.io.js')
         title=pageTitle
-        link(rel='stylesheet', href='estilos.css')
+        link(rel='stylesheet', href='style.css')
     body
         include partials/bienvenida.pug
         include partials/navBar.pug
-        h1 mi app chat
+        h1 My app Chat
         div(id='messages')
         form(onsubmit='return addMessage()')
             input#name.form-control(type='email' placeholder='Correo')

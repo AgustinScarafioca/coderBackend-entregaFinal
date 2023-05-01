@@ -1,5 +1,5 @@
 import ServiceCart from '../service/cart.js'
-import { Correo } from '../service/nodemailer.js'
+import { correo } from '../service/nodemailer.js'
 import ServicePurchases from '../service/purchases.js'
 
 class Controller {
@@ -11,7 +11,7 @@ class Controller {
 		if (purchases) {
 			const asunto = `Compra exitosa ${purchases.id}`
 			const mensaje = `<h1 style="color: blue;"> Hola ${mail}, tu compra ha sido exitosa, su id de confirmacion es ${purchases.id}. Compraste el/los Productos ${purchases.productos.map((p)=>{return ` ${p.name} $${p.price}`})}</h1>`
-			await Correo(mail, asunto, mensaje);
+			await correo(mail, asunto, mensaje);
 		}
 		const confirmacion = `tu compra ha sido exitosa, su id de confirmacion es ${purchases.id} le llegara una copia a su correo`
 		await ServiceCart.delete(mail)

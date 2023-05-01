@@ -1,4 +1,4 @@
-const chat = (req, res) => {
+const Chat = (req, res) => {
 	const user = req.user
 	if (user === undefined) {
 		return res.redirect('/')
@@ -11,4 +11,4 @@ const chat = (req, res) => {
 	return res.render('UserLogin/mensajes', { saludo, avatar })
 }
 
-export default chat
+export default Chat
